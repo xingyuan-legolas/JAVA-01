@@ -1,0 +1,15 @@
+port: 80
+services:
+  - host: localhost
+    routing_policy: round_robin
+    connection_pool_size: 8
+    upstreams:
+      - address: localhost
+        port: 8803
+        weight: 0.6
+#      - address: localhost
+#        port: 8802
+#        weight: 0.3
+#      - address: localhost
+#        port: 8801
+#        weight: 0.1
